@@ -15,7 +15,7 @@
 #include<string.h>
 using namespace std;
 
-class user{
+class diamond{
 	
 	private:
 		
@@ -40,7 +40,45 @@ class user{
     this->comp_revenue=comp_revenue;
     strcmp(this->comp_export_diamonds,comp_export_diamonds);
 	strcmp(this->comp_ceo,comp_ceo);
+		
+	}	
 	
+	void getter();
+		
+		
+};
+
+void diamond::getter(){
+	
+	cout<<"Company id = "<<comp_id<<endl;
+    cout<<"Company name = "<<comp_name<<endl;
+	cout<<"Company Staff Quantity = "<<comp_staff_quantity<<endl;
+	cout<<"Company Comp Revenue = "<<comp_revenue<<endl;
+	cout<<"Company Import Raw Diamonds = "<<comp_import_raw_diamonds<<endl;
+	cout<<"Company Export Diamonds = "<<comp_export_diamonds<<endl;
+	cout<<"Company CEO = "<<comp_ceo<<endl;
+}
+
+main(){
+	
+	
+   
+	
+	int n;
+	int i;
+	int	comp_id;
+    char comp_name[50];
+    int comp_staff_quantity;
+    int comp_revenue;
+    char comp_import_raw_diamonds[50]; 
+    char comp_export_diamonds[50];
+    char comp_ceo[50];
+
+
+	cout<<"Enter value:";
+	cin>>n;
+	
+	for(i=0; i<n ; i++){
 	cout<<"Enter Company id:";
 	cin>>comp_id;
 	
@@ -62,39 +100,12 @@ class user{
 	cout<<"Enter Company CEO:";
 	cin>>comp_ceo;
 	
+	diamond o(comp_id,comp_name, comp_staff_quantity, comp_revenue, comp_import_raw_diamonds, comp_export_diamonds, comp_ceo );
 	
-	}	
-	
-	void setter();
-		
-		
-};
 
-void user::setter(){
-	
-	cout<<"Company id = "<<comp_id<<endl;
-    cout<<"Company name = "<<comp_name<<endl;
-	cout<<"Company Staff Quantity = "<<comp_staff_quantity<<endl;
-	cout<<"Company Comp Revenue = "<<comp_revenue<<endl;
-	cout<<"Company Import Raw Diamonds = "<<comp_import_raw_diamonds<<endl;
-	cout<<"Company Export Diamonds = "<<comp_export_diamonds<<endl;
-	cout<<"Company CEO = "<<comp_ceo<<endl;
-}
-
-main(){
-	
-	
-   user o;
-	
-	int n;
-	int i;
-	cout<<"Enter value:";
-	cin>>n;
-	
-	for(i=0; i<n ; i++){
-	
-    o.diamond();
-	o.setter();
+		
+		o.getter();
+	    
 }
 	
 }
